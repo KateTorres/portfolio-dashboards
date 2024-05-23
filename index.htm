@@ -5,44 +5,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Dashboard</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Assuming you have a CSS file for styling -->
+  <link rel="stylesheet" href="style.css"> <!-- Assuming you have a CSS file for styling -->
 </head>
 <body>
-  <h1>Portfolio of Projects</h1>
+  <h1>Kate's Project Portfolio</h1>
+
   <div>
     <h2>Power BI Dashboard</h2>
-    <p>
-      This Power BI dashboard provides an example of financial results from 2 stores.
-      <!-- Link to open the Power BI file -->
-      <a href="power_bi_financial_dashboard_example.pbix" target="_blank">
-        <img id="icon" src="images/icon_power_bi.png" alt="Open Power BI">
-      </a>
-      <a href="power_bi_financial_dashboard_example.pdf" onclick="openPDF('power_bi_financial_dashboard_example.pdf')">View as PDF Report</a>
-    </p>
+    <p>This Power BI dashboard provides an example of financial results from 2 stores.</p>
+    <!-- Link to the Power BI Dashboard GitHub Pages -->
+    <a href="https://katetorres.github.io/power-bi/">Open Power BI Dashboard</a>
   </div>
 
   <div>
     <h2>Synthetic Data Generator</h2>
-    <p>
-      Generate and analyze synthetic stability data using kinetic modeling.
-      <!-- Link to the Synthetic Data Generator project -->
-      <a href="https://username.github.io/stability-mab-arrhenius/" target="_blank">Launch Synthetic Data Generator</a>
-    </p>
+    <p>Generate and analyze synthetic stability data using kinetic modeling.</p>
+    <!-- Link to the Synthetic Data Generator GitHub Pages -->
+    <a href="https://katetorres.github.io/stability-mab-arrhenius/">Launch Synthetic Data Generator</a>
   </div>
 
-  <!-- PDF viewer script remains the same -->
-  <script>
-    function openPDF(pdfPath) {
-      var pdfViewer = document.getElementById('pdf-viewer');
-      if (pdfViewer.style.display === 'block') {
-        pdfViewer.style.display = 'none';
-      } else {
-        pdfViewer.innerHTML = `<object type="application/pdf" data="${pdfPath}" width="100%" height="500px">
-                                Sorry, your browser does not support PDFs. Please download the PDF to view it: <a href="${pdfPath}">Download PDF</a>
-                               </object>`;
-        pdfViewer.style.display = 'block';
-      }
-    }
-  </script>
 </body>
 </html>
