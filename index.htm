@@ -1,12 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Kate's Portfolio Dashboard</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Dashboards</title>
+  <style>
+    #icon {
+      width: 20px; /* Small icon width */
+      height: auto; /* Maintain aspect ratio */
+      cursor: pointer; /* Indicates clickable */
+    }
+    #pdf-viewer {
+      width: 100%; /* Full width of container */
+      height: 900px; /* Sufficient height for viewing */
+      display: none; /* Hidden by default */
+      border: 1px solid #ccc; /* Adds a border around the PDF viewer */
+    }
+  </style>
 </head>
 <body>
-    <h1>Project Portfolio</h1>
-    <a href="power-bi/">Power BI Dashboard</a>
-    <a href="stability-mab-arrhenius/">Synthetic Data Generator</a>
+  <h1>Portfolio Dashboards</h1>
+  <h2>Sales Overview in Power BI</h2>
+  <p>
+    Open in Power BI software
+    <a href="power_bi_financial_dashboard_example.pbix" target="_blank">
+      <img id="icon" src="images/icon_power_bi.png" alt="Open Power BI">
+    </a>
+  </p>
+  <p>
+    View as PDF Report
+    <img id="icon" src="images/icon_pdf.png" alt="Open PDF" onclick="openPDF()"> 
+  </p>
+  <div id="pdf-viewer"></div>
+  <h2>Synthetic Data Generator</h2>
+  <p>
+    View the Synthetic Data Generator project on 
+    <a href="https://katetorres.github.io/stability-mab-arrhenius/">GitHub Pages</a>.
+  </p>
+  <script>
+    function openPDF() {
+      var pdfViewer = document.getElementById('pdf-viewer');
+      var pdfPath = 'power_bi_financial_dashboard_example.pdf';
+      if (pdfViewer.style.display === 'block') {
+        pdfViewer.style.display = 'none'; // Toggle off if clicked again
+      } else {
+        pdfViewer.innerHTML = `<object type="application/pdf" data="${pdfPath}" width="100%" height="500px">
+                                Sorry, your browser does not support PDFs. Please download the PDF to view it: <a href="${pdfPath}">Download PDF</a>
+                               </object>`;
+        pdfViewer.style.display = 'block'; // Display the viewer
+      }
+    }
+  </script>
 </body>
 </html>
