@@ -1,3 +1,9 @@
-** Power BI Dashboard that displays an example of financial results from 2 stores**
+* This is a HUB for displaying portfolio projects**
 
-Idea was taken from https://www.linkedin.com/learning/instructors/emma-saunders/ (This course with instructor Emma Saunders teaches data professionals how to increase their proficiency in Power BI, from creating their first visual, to creating DAX expressions and using the Power Query Editor, all through a series of challenges. Learn how to import data, add new data to a data set, create calculated columns and measures using DAX, create a visual, use Power Query Editor to fix problems with data, and much more.)
+**Structure**
+/portfolio-dashboards
+    /power-bi
+        index.html
+    /stability-mab-arrhenius
+        index.html
+    index.html
